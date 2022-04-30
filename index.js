@@ -5,7 +5,9 @@ const {
   Intents,
   MessageAttachment,
 } = require("discord.js");
-const { token } = require("./config.json");
+require("dotenv").config();
+
+const { token } = process.env;
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
